@@ -1,6 +1,6 @@
-# htpasswd read file
+# Lecture du fichier .htpasswd
 
-htpasswd allows you to create and maintain text files where usernames and passwords are stored for basic authentication of HTTP users.
+Un fichier .htpasswd est généralement utilisé pour protéger un dossier, un fichier ou même un site web entier avec un mot de passe via l’authentification « HTTP ». Cette protection est souvent mise en place avec les directives contenues dans un fichier .htaccess.
 
 ```bash
 docker run --rm hypnza/dirbuster -u http://10.11.248.36:80/
@@ -29,12 +29,24 @@ Dir found: /whatever/ - 200
 
 `http://10.11.248.36/whatever/`
 
-On file **htpasswd**:
 `root:437394baff5aa33daa618be47b75cb49`
-- Cracking password with CrackStation: https://crackstation.net/
+- Cracker le mot de passe avec crackstation: https://crackstation.net/
 `437394baff5aa33daa618be47b75cb49 = qwerty123@`
 
-Use login **root**/**qwerty123@** on admin path: `http://10.11.248.36/admin/#`
+Utiliser le login **root**/**qwerty123@** sur le chemin admin: `http://10.11.248.36/admin/#`
+
+### Ce que ça implique / pourquoi c’est dangereux
+Si n'importe quel utilisateur peut lire le fichier .htaccess, il peut essayer de deviner le mot de passe via un bruteforce si le chiffrement est faible ou que le mot de passe n'est pas complexe.
+L’attaquant peut ainsi :
+
+- Bruteforce le mot de passe
+- Se connecter en root ou admin si il arrive a trouver le mot de passe
+
+### Comment la corriger
+
+- Restreindre l'accès à htpasswd via htaccess
+- Placer htpasswd dans un dossier non accessible via le web
+- Limiter l'accès par IP
 
 ## CWE
 
@@ -43,5 +55,3 @@ Use login **root**/**qwerty123@** on admin path: `http://10.11.248.36/admin/#`
 
 **CWE-326**: Inadequate Encryption Strength
 - https://cwe.mitre.org/data/definitions/326.html
-
-**Flag**: `d19b4823e0d5600ceed56d5e896ef328d7a2b9e7ac7e80f4fcdb9b10bcb3e7ff`

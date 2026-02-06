@@ -1,4 +1,4 @@
-## Vulnérabilité : SQL Injection (UNION-based sur module images)
+## SQL Injection (UNION-based sur module images)
 
 - `0x6C6973745F696D61676573` = `list_images`
 

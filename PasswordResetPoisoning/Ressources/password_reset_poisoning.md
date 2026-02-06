@@ -1,8 +1,21 @@
-page forget password
+# Password reset poisoning change email
 
-dans POST http://10.12.248.26/index.php?page=recover
-une adresse mail apparait en bas, si on la change, flag
+`POST http://10.12.248.26/index.php?page=recover`
+```html
+<form action="#" method="POST">
+	<input type="hidden" name="mail" value="webmaster@borntosec.com" maxlength="15">
+	<input type="submit" name="Submit" value= "Submit">
+</form>
+```
+Changer l'email par un email malveillant.
 
+### Ce que ça implique / pourquoi c’est dangereux
+L’attaquant peut ainsi :
 
+- Recevoir un mail pour changer le mot de passe de webmaster
 
-flag = 1d4855f7337c0c14b6f44946872c4eb33853f40b2d54393fbe94f49f1e19bbb0
+### Comment la corriger
+
+- Vérifier l'email au moment du post
+
+## CWE
