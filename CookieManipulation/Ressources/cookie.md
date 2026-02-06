@@ -2,7 +2,7 @@
 
 - `b326b5062b2f0e69046810717534cb09` = **true**
 - `68934a3e9455fa72420237eb05902327` = **false**
-- Cracking cookie with CrackStation: https://crackstation.net/
+- Crack le cookie avec crackstation: https://crackstation.net/
 
 ### Ce que ça implique / pourquoi c’est dangereux
 L’attaquant peut ainsi :
