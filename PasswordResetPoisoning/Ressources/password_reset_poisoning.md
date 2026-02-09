@@ -9,13 +9,15 @@
 ```
 Changer l'email par un email malveillant.
 
-### Ce que ça implique / pourquoi c’est dangereux
+## Ce que ça implique / pourquoi c’est dangereux
 L’attaquant peut ainsi :
 
 - Recevoir un mail pour changer le mot de passe de webmaster
 
-### Comment la corriger
+## Comment la corriger
 
 - Vérifier l'email au moment du post
 
 ## CWE
+
+- CWE-640: Weak Password Recovery Mechanism for Forgotten Password

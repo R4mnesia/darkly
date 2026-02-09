@@ -8,6 +8,7 @@ Change redirection with google.com for example:
 L’attaquant peut ainsi :
 
 - Rediriger l'URL vers un site malveillant
+- Envoyer une page de phishing `http://10.13.247.185/index.php?page=redirect&site=google`
 
 Cela montre un **accès non autorisé complet aux données** de la base.
 

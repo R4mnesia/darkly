@@ -8,4 +8,16 @@
 - `-R`: reject index.html
 - `-e`: execute (robots.txt off)
 
-**Flag** : d5eec3ec36cf80dce44a896f961c1831a05526ec215693c8f2c39543497d4466
+### Ce que ça implique / pourquoi c’est dangereux
+
+L’attaquant peut ainsi :
+- Télécharger des fichiers cachés sur le site.
+
+### Comment la corriger
+
+- Eviter de mettre des fichiers caché et téléchargeable par des utilisateurs sans privilèges spécifique.
+
+## CWE
+
+**CWE-434**: Unrestricted Upload of File with Dangerous Type
+https://cwe.mitre.org/data/definitions/434.html
